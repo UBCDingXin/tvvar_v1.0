@@ -14,7 +14,7 @@ mlevar_fit(it, X, b)
 \item{b}{bandwidth}
 }
 \value{
-Estimation of transition matrix at time t
+Estimation of transition matrix at time it
 }
 \description{
 Fit a time-varying MLE model for vector autoregressive data

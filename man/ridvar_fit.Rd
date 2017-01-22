@@ -16,7 +16,7 @@ ridvar_fit(it, X, lam, b)
 \item{b}{bandwidth}
 }
 \value{
-Estimation of transition matrix at time t
+Estimation of transition matrix at time it
 }
 \description{
 Fit a time-varying Ridge model for vector autoregressive data

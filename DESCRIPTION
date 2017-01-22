@@ -1,10 +1,10 @@
 Package: tvvar
 Type: Package
-Title: Fit time-varying models
+Title: Fit time-varying models for VAR data
 Version: 0.1.0
 Author: Xin Ding; Xiaohui Chen
 Maintainer: Xin Ding <dingx92@gmail.com>
-Description: Fit TVVAR, time-varying Ridge, time-varying Lasso and time-varying MLE models for time-varying autoregressive model.
+Description: Fit TVVAR, time-varying Ridge, time-varying Lasso and time-varying MLE models for time-varying autoregressive data.
 License: 
 Encoding: UTF-8
 LazyData: true

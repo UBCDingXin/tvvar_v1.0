@@ -16,7 +16,7 @@ tvvar_fit(it, X, tau, b)
 \item{b}{bandwidth}
 }
 \value{
-Estimation of transition matrix at time t
+Estimation of transition matrix at time it
 }
 \description{
 Fit a TVVAR model for vector autoregressive data

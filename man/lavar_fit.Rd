@@ -22,7 +22,7 @@ lavar_fit(it, X, lam, b, alpha, A_old, A_oldold)
 \item{A_oldold}{initial matrix 2}
 }
 \value{
-Estimation of transition matrix at time t
+Estimation of transition matrix at time it
 }
 \description{
 Fit a time-varying Lasso model for vector autoregressive data
