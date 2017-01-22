@@ -2,21 +2,21 @@
 % Please edit documentation in R/VAR_lib_package_building.R
 \name{mlevar_fit}
 \alias{mlevar_fit}
-\title{fit a MLE_VAR model based on MLE}
+\title{Time-varying MLE model}
 \usage{
 mlevar_fit(it, X, b)
 }
 \arguments{
-\item{it}{time}
+\item{it}{Specify the time point we are researching}
 
-\item{X}{T*d array which stores the data of the time series. T is the length and d is the dimension.}
+\item{X}{T*d array which stores the data of the time series. T is the length of time and d is the dimension.}
 
 \item{b}{bandwidth}
 }
 \value{
-Estimation of transition matrix
+Estimation of transition matrix at time t
 }
 \description{
-fit a MLE_VAR model based on MLE
+Fit a time-varying MLE model for vector autoregressive data
 }
 

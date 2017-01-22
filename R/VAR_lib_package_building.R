@@ -33,12 +33,13 @@ vc_weight_epanechnikovker<-Vectorize(weight_epanechnikovker,vectorize.args='m')#
 vc_weight_epanechnikovker=cmpfun(vc_weight_epanechnikovker)
 
 
-#' fit a TV_VAR model
+#' @title TVVAR model
+#' @description Fit a TVVAR model for vector autoregressive data
 #' @param it Specify the time point we are researching
 #' @param X T*d array which stores the data of the time series. T is the length of time and d is the dimension.
 #' @param tau penalty parameter
 #' @param b bandwidth
-#' @return Estimation of transition matrix at time t
+#' @return Estimation of transition matrix at time it
 tvvar_fit<-function(it,X,tau,b){
   T=dim(X)[1]
   d=dim(X)[2]
@@ -78,14 +79,14 @@ tvvar_fit<-function(it,X,tau,b){
   return(A_hat)
 }
 
-
-#' fit a Ridge_VAR model based on LS with l2 penalty
+#' @title Time-varying Ridge model
+#' @description Fit a time-varying Ridge model for vector autoregressive data
 #' @param it Specify the time point we are researching
 #' @param X T*d array which stores the data of the time series. T is the length of time and d is the dimension.
 #' @param lam penalty parameter
 #' @param b bandwidth
-#' @return Estimation of transition matrix at time t
-lsvar_fit<-function(it,X,lam,b){
+#' @return Estimation of transition matrix at time it
+ridvar_fit<-function(it,X,lam,b){
   T=dim(X)[1]
   d=dim(X)[2]
   #compute the kernel weights for t_i
@@ -100,12 +101,12 @@ lsvar_fit<-function(it,X,lam,b){
   return(A_hat_LS)
 }
 
-
-#' fit a MLE_VAR model based on MLE
+#' @title Time-varying MLE model
+#' @description Fit a time-varying MLE model for vector autoregressive data
 #' @param it Specify the time point we are researching
 #' @param X T*d array which stores the data of the time series. T is the length of time and d is the dimension.
 #' @param b bandwidth
-#' @return Estimation of transition matrix at time t
+#' @return Estimation of transition matrix at time it
 mlevar_fit<-function(it,X,b){
   T=dim(X)[1]
   d=dim(X)[2]
@@ -126,7 +127,9 @@ abso<-function(x){
   x[x<0]=0
   return(x)
 }
-#' fit a Lasso_VAR model based on LS with l1 penalty
+
+#' @title Time-varying Lasso model
+#' @description Fit a time-varying Lasso model for vector autoregressive data
 #' @param it Specify the time point we are researching
 #' @param X T*d array which stores the data of the time series. T is the length of time and d is the dimension.
 #' @param lam shrinkage parameter
@@ -134,7 +137,7 @@ abso<-function(x){
 #' @param alpha stepsize
 #' @param A_old initial matrix 1
 #' @param A_oldold initial matrix 2
-#' @return Estimation of transition matrix at time t
+#' @return Estimation of transition matrix at time it
 lavar_fit<-function(it,X,lam,b,alpha,A_old,A_oldold){
   T=dim(X)[1]
   d=dim(X)[2]

@@ -2,14 +2,14 @@
 % Please edit documentation in R/VAR_lib_package_building.R
 \name{lavar_fit}
 \alias{lavar_fit}
-\title{fit a Lasso_VAR model based on LS with l1 penalty}
+\title{Time-varying Lasso model}
 \usage{
 lavar_fit(it, X, lam, b, alpha, A_old, A_oldold)
 }
 \arguments{
-\item{it}{time}
+\item{it}{Specify the time point we are researching}
 
-\item{X}{T*d array which stores the data of the time series. T is the length and d is the dimension.}
+\item{X}{T*d array which stores the data of the time series. T is the length of time and d is the dimension.}
 
 \item{lam}{shrinkage parameter}
 
@@ -22,9 +22,9 @@ lavar_fit(it, X, lam, b, alpha, A_old, A_oldold)
 \item{A_oldold}{initial matrix 2}
 }
 \value{
-Estimation of transition matrix
+Estimation of transition matrix at time t
 }
 \description{
-fit a Lasso_VAR model based on LS with l1 penalty
+Fit a time-varying Lasso model for vector autoregressive data
 }
 
